@@ -1,0 +1,41 @@
+models:
+  - name: hub_customer
+    description: > 
+     This table stores unique customer records with hashed surrogate keys.
+    columns:
+      - name: customer_hk
+        description: Hash key of customer_id, used as surrogate key.
+        tests:
+          - unique
+          - not_null
+      - name: load_dts
+        description: Load timestamp.
+      - name: source
+        description: source of the data.
+
+  - name: link_customer_order
+    description: > 
+      Link table connecting customers and orders. Uses hashed keys to track 
+      relationships.
+    columns:
+      - name: customer_order_hk
+        description: Composite hash key of customer_id and order_id.
+      - name: order_hk
+        description: Foreign key to the order hub.
+
+  - name: sat_customer
+    description: This Satellite table storing customer descriptive data.
+    columns:
+      - name: customer_hk
+        description: Foreign key to the customer hub.
+        tests:
+          - not_null
+      - name: customer_email
+        tests:
+          - not_null
+
+macros:
+  - name: current_timestamp
+    description: > 
+     This function returns the current timestamp using the database's 
+     built-in function(e.g. CURRENT_TIMESTAMP())
