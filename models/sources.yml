@@ -1,0 +1,8 @@
+sources:
+  - name: raw_layer
+    database: dbt_project
+    schema: raw
+    tables:
+      - name: raw_customers
+
+      - name: raw_orders

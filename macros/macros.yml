@@ -1,0 +1,5 @@
+macros:
+  - name: current_timestamp
+    description: > 
+     This function returns the current timestamp using the database's 
+     built-in function(e.g. CURRENT_TIMESTAMP())
