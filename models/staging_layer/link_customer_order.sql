@@ -10,7 +10,7 @@ WITH source_data AS (
         o.order_id,
         {{current_timestamp()}} AS load_dts,
         'RAW' AS source
-    FROM {{ source('source_data','raw_orders') }} o
+    FROM {{ source('raw_layer','raw_orders') }} o
     {% if is_incremental() %}
     WHERE MD5(CONCAT(customer_id,order_id)) NOT IN(
         SELECT customer_order_hk FROM {{ this }}

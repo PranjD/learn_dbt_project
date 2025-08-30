@@ -1,5 +1,5 @@
 sources:
-  - name: source_data
+  - name: raw_layer
     database: dbt_project
     schema: raw
     tables:

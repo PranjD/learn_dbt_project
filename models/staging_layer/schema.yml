@@ -8,6 +8,8 @@ models:
         tests:
           - unique
           - not_null
+      - name: customer_id
+        description: natural key like original identifier from source.
       - name: load_dts
         description: Load timestamp.
       - name: source
@@ -18,10 +20,16 @@ models:
       Link table connecting customers and orders. Uses hashed keys to track 
       relationships.
     columns:
+      - name: customer_hk
+        description: Foreign key references from the customer hub table.
       - name: customer_order_hk
         description: Composite hash key of customer_id and order_id.
       - name: order_hk
         description: Foreign key to the order hub.
+      - name: load_dts
+        description: Load timestamp.
+      - name: source
+        description: source of the data.
 
   - name: sat_customer
     description: This Satellite table storing customer descriptive data.
@@ -33,9 +41,26 @@ models:
       - name: customer_email
         tests:
           - not_null
+      - name: customer_name
+        description: customer name
+      - name: customer_email
+        description: customer email
+      - name: customer_phone
+        description: customer phone
+      - name: load_dts
+        description: Load timestamp.
+      - name: source
+        description: source of the data.
 
-macros:
-  - name: current_timestamp
-    description: > 
-     This function returns the current timestamp using the database's 
-     built-in function(e.g. CURRENT_TIMESTAMP())
+  - name: hub
+    description: Stores unique business entity
+  - name: link
+    description: Links customers to their orders by buisness keys.
+  - name: satellite
+    description: Captures descriptive attributes of customers.
+
+data_tests:
+  - name: test_invalid_emails
+    description: >
+     This test ensures that all email addresses in the model are valid and follow
+     the expected format.
