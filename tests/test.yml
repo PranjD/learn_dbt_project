@@ -1,0 +1,5 @@
+data_tests:
+  - name: test_invalid_emails
+    description: >
+      This test ensures that all email addresses in the model are valid and follow
+      the expected format.
