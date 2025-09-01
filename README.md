@@ -84,7 +84,6 @@ Project dw_layer
    d. DW layer models : simple curated outputs for downstream use.
    e. Documentation and testing : provides description and built in tests.
 
-<<<<<<< HEAD
 Resources:
 ---Project:
 |----Snowflake_scripts
