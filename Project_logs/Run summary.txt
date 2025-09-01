@@ -1,0 +1,47 @@
+Step 1: Clone git repository -
+
+Cloning into '/restricted-chroot/tmp/jobs/70471844061482/target'...
+Successfully cloned repository.
+Checking out default branch
+Checked out to d043f7665c3c06075f5a9f84d984930c57052475.
+
+Step 2: Profile creation -
+Create profile from connection Snowflake
+
+Step 3: dbt deps -
+08:36:26  Running dbt...
+08:36:26  Warning: No packages were found in packages.yml
+08:36:26  Warning: No packages were found in packages.yml
+
+Step 4: dbt build -
+
+08:50:16 12 of 13 START sql table model dbt_pd_mart.link ................................ [RUN]
+08:50:17 9 of 13 PASS not_null_hub_customer_customer_hk ................................. [PASS in 0.33s]
+08:50:17 10 of 13 PASS unique_hub_customer_customer_hk .................................. [PASS in 0.42s]
+08:50:17 13 of 13 START sql table model dbt_pd_mart.hub ................................. [RUN]
+08:50:17 11 of 13 OK created sql table model dbt_pd_mart.satellite ...................... [SUCCESS 1 in 0.86s]
+08:50:18 13 of 13 OK created sql table model dbt_pd_mart.hub ............................ [SUCCESS 1 in 0.87s]
+08:50:18 12 of 13 OK created sql table model dbt_pd_mart.link ........................... [SUCCESS 1 in 1.14s]
+08:50:19  
+08:50:19
+08:50:19  Finished running 3 incremental models, 5 table models, 5 data tests in 0 hours 0 minutes and 13.25 seconds (13.25s).
+08:50:20  
+08:50:20
+08:50:20  Completed successfully
+08:50:20  
+08:50:20
+08:50:20  Done. PASS=13 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=13
+
+Step 5 : dbt docs generate -
+
+08:50:22  Running dbt...
+08:50:24  Found 8 models, 5 data tests, 2 sources, 480 macros
+08:50:24  
+08:50:24
+08:50:24  Concurrency: 4 threads (target='default')
+08:50:24  
+08:50:28  Building catalog
+08:50:33  Catalog written to /tmp/jobs/70471844061482/target/target/catalog.json
+
+
+

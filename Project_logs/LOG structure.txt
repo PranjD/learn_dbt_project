@@ -1,0 +1,64 @@
+=============================================================
+DBT LOG FILE - Execution Tracking structure
+=============================================================
+Date : 01-Sep-2025
+Run ID: #70471844061482
+Environment : PROD
+Status : SUCCESS
+
+==========================================================
+1. RUN SUMMARY
+=============================================================
+Step 1: Clone git repository -> Success
+Step 2: Create profile from connection Snowflake -> Success
+Step 3: Invoke dpt deps -> Success
+Step 4: Invoke dbt build -> Success
+Step 5: Invoke dbt docs generate -> Success
+
+
+===================================================================
+2. DEBUG LOGS : (Extracted from dbt cloud run UI)
+================================================================
+attached debug logs which capture each steps, query and system message during a run 
+for troubleshooting and tracking model execution.
+
+==========================================================
+3. ARTIFACTS (Proof of execution)
+==============================================================
+Files generated during run
+catalog.json
+compiled/my_new_project/models/dw_layer/hub.sql
+compiled/my_new_project/models/dw_layer/link.sql
+compiled/my_new_project/models/dw_layer/satellite.sql
+compiled/my_new_project/models/raw_layer/customers.sql
+compiled/my_new_project/models/raw_layer/orders.sql
+compiled/my_new_project/models/staging_layer/hub_customer.sql
+compiled/my_new_project/models/staging_layer/link_customer_order.sql
+compiled/my_new_project/models/staging_layer/sat_customer.sql
+compiled/my_new_project/models/staging_layer/schema.yml/not_null_hub_customer_customer_hk.sql
+compiled/my_new_project/models/staging_layer/schema.yml/not_null_sat_customer_customer_email.sql
+compiled/my_new_project/models/staging_layer/schema.yml/not_null_sat_customer_customer_hk.sql
+compiled/my_new_project/models/staging_layer/schema.yml/unique_hub_customer_customer_hk.sql
+compiled/my_new_project/tests/test_invalid_emails.sql
+graph_summary.json
+index.html
+manifest.json
+run/my_new_project/models/dw_layer/hub.sql
+run/my_new_project/models/dw_layer/link.sql
+run/my_new_project/models/dw_layer/satellite.sql
+run/my_new_project/models/raw_layer/customers.sql
+run/my_new_project/models/raw_layer/orders.sql
+run/my_new_project/models/staging_layer/hub_customer.sql
+run/my_new_project/models/staging_layer/link_customer_order.sql
+run/my_new_project/models/staging_layer/sat_customer.sql
+run/my_new_project/models/staging_layer/schema.yml/not_null_hub_customer_customer_hk.sql
+run/my_new_project/models/staging_layer/schema.yml/not_null_sat_customer_customer_email.sql
+run/my_new_project/models/staging_layer/schema.yml/not_null_sat_customer_customer_hk.sql
+run/my_new_project/models/staging_layer/schema.yml/unique_hub_customer_customer_hk.sql
+run/my_new_project/tests/test_invalid_emails.sql
+run_results.json
+semantic_manifest.json
+
+Also (run_results.json attached separately for reference -> contains model wise success/failure and execution time).
+
+===================================================================================================================
