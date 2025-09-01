@@ -23,7 +23,7 @@ it project extracts and transforms raw customer and raw order data from the
 dimentional tables using dbt.
 It uses:
 -Incremental models for efficient processing
-- Surrogate keys for slowly changing dimensions
+- Surrogate keys and snapshots slowly changing dimensions
 - Macros for DRY code (e.g. timestamp) 
 - Tests for data quality and validation
 - Data Lineage tracking and testing via dbt docs and 'schema.yml'
@@ -65,6 +65,10 @@ Project dw_layer
 |----Used for write code once and reuse it whenever required.
 |---- macros.yml, timestamp.sql
 
+---Project snapshots:
+|----Used to track history of descriptive attributes.
+|---- snapshot.yml, sat_customer_snapshot.sql 
+
 4. setup Instructions :
 a. create snowflake account
 b. install dbt cloud
@@ -78,4 +82,21 @@ c. Staging models : For applying hashing,timestamps, using incremental models
 for performance. 
 d. DW layer models : simple curated outputs for downstream use.
 e. Documentation and testing : provides description and built in tests.
+
+Resources:
+---Project: 
+|----Snowflake_scripts 
+|-------snowflake_setup.txt 
+|-------Raw tables creation and insertion.txt
+
+---Project: 
+|----Project_logs 
+|-------LOG structure.txt 
+|-------Run summary.txt 
+|------DEBUG.txt 
+|------run_results.json
+
+7. Live documentation : 
+dbt docs -> https://pranjd.github.io/learn_dbt_project/
+
 
