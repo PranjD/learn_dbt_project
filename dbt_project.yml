@@ -40,6 +40,8 @@ models:
     # Applies to all files under models/example/
       +materialized: table
       +transient: false
+      raw_layer:
+        +schema: raw
       staging_layer:
         +schema: staging
       dw_layer:

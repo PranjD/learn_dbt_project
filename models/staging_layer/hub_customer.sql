@@ -9,7 +9,7 @@ WITH source_data AS (
         customer_id,
         {{current_timestamp()}} AS load_dts,
         'RAW' AS source
-    FROM {{ source('raw_layer','raw_customers') }}
+    FROM {{ ref('customers') }}
     {% if is_incremental() %}
     WHERE MD5(customer_id) NOT IN(
         SELECT customer_hk FROM {{ this }}
