@@ -1,7 +1,7 @@
 {% snapshot sat_customer_snapshot %}
     {{
         config(
-            target_schema='staging',
+            target_schema='dbt_pd_staging',
             target_database='dbt_project',
             unique_key='customer_hk',
             strategy='check',
