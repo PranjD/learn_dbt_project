@@ -17,25 +17,26 @@ Try running the following commands:
 DBT Data Vault Project :
 
 1. Project Overview :
-This project demonstrates a simplified Data Vault implementing using dbt and
-it project extracts and transforms raw customer and raw order data from the
-"dbt_project.raw" schema and builds a structured data warehouse in pc_dbt_db with
-dimentional tables using dbt.
-It uses:
--Incremental models for efficient processing
+   This project demonstrates a simplified Data Vault implementing using dbt and
+   it project extracts and transforms raw customer and raw order data from the
+   "dbt_project.raw" schema and builds a structured data warehouse in pc_dbt_db with
+   dimentional tables using dbt.
+   It uses:
+   -Incremental models for efficient processing
+
 - Surrogate keys and snapshots slowly changing dimensions
-- Macros for DRY code (e.g. timestamp) 
+- Macros for DRY code (e.g. timestamp)
 - Tests for data quality and validation
 - Data Lineage tracking and testing via dbt docs and 'schema.yml'
 
 2. Business Context and use cases:
-As this is for Customer analysis to track customer performance, monitor 
-order processing, ensures consistent and reliable data, support growing data 
-and new sources.
+   As this is for Customer analysis to track customer performance, monitor
+   order processing, ensures consistent and reliable data, support growing data
+   and new sources.
 
 3. Project Structure:
 
-dbt_project.yml configuration file used for project metadata and model 
+dbt_project.yml configuration file used for project metadata and model
 organization and all.
 
 Project Raw_layer ---- source data
@@ -58,7 +59,7 @@ Project dw_layer
 |-----astellite.sql
 
 ---Project tests:
-|--singular tests for validation 
+|--singular tests for validation
 |---test_invalid_emails.sql
 
 ---Project macros:
@@ -67,36 +68,36 @@ Project dw_layer
 
 ---Project snapshots:
 |----Used to track history of descriptive attributes.
-|---- snapshot.yml, sat_customer_snapshot.sql 
+|---- snapshot.yml, sat_customer_snapshot.sql
 
 4. setup Instructions :
-a. create snowflake account
-b. install dbt cloud
-c. create github repo and all connections
-d. run all dbt commands for testing
+   a. create snowflake account
+   b. install dbt cloud
+   c. create github repo and all connections
+   d. run all dbt commands for testing
 
-5. Flow summary:
-a. Raw layer : manually created in snowflake actual tables holds the source data
-b. Source Definition : configuration of source data
-c. Staging models : For applying hashing,timestamps, using incremental models
-for performance. 
-d. DW layer models : simple curated outputs for downstream use.
-e. Documentation and testing : provides description and built in tests.
+6. Flow summary:
+   a. Raw layer : manually created in snowflake actual tables holds the source data
+   b. Source Definition : configuration of source data
+   c. Staging models : For applying hashing,timestamps, using incremental models
+   for performance.
+   d. DW layer models : simple curated outputs for downstream use.
+   e. Documentation and testing : provides description and built in tests.
 
+<<<<<<< HEAD
 Resources:
----Project: 
-|----Snowflake_scripts 
-|-------snowflake_setup.txt 
+---Project:
+|----Snowflake_scripts
+|-------snowflake_setup.txt
 |-------Raw tables creation and insertion.txt
 
----Project: 
-|----Project_logs 
-|-------LOG structure.txt 
-|-------Run summary.txt 
-|------DEBUG.txt 
+---Project:
+|----Project_logs
+|-------LOG structure.txt
+|-------Run summary.txt
+|------DEBUG.txt
 |------run_results.json
 
-7. Live documentation : 
-dbt docs -> https://pranjd.github.io/learn_dbt_project/
-
+7. Live documentation :
+   dbt docs -> https://pranjd.github.io/learn_dbt_project/
 
