@@ -5,7 +5,7 @@
             target_database='dbt_project',
             unique_key='customer_hk',
             strategy='check',
-            check_cols=['customer_name','customer_email','customer_name']
+            check_cols=['customer_name','customer_email','customer_phone']
         )
     }}
 
