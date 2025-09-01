@@ -13,13 +13,7 @@ WITH source_data AS (
         {{current_timestamp()}} AS load_dts,
         'RAW' AS source
     FROM {{ ref('customers') }}
-    {% if is_incremental() %}
-    WHERE MD5(customer_id) NOT IN(
-        SELECT customer_hk FROM {{ this }}
-    )
-{% endif %}
 )
-
 SELECT
     MD5(customer_id) AS customer_hk,
     customer_name,

@@ -1,0 +1,3 @@
+snapshots:
+  - name: sat_customer_snapshot
+    description: To track the historical changes of customer attributes
