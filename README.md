@@ -6,14 +6,6 @@ Try running the following commands:
 - dbt run
 - dbt test
 
-
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [dbt community](https://getdbt.com/community) to learn from other analytics engineers
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
-
 DBT Data Vault Project :
 
 1. Project Overview :
@@ -71,11 +63,26 @@ b. install dbt cloud
 c. create github repo and all connections
 d. run all dbt commands for testing
 
-5. Flow summary:
+---Project:
+|----Snowflake_scripts
+|-------snowflake_setup.txt
+|-------Raw tables creation and insertion.txt
+
+---Project:
+|----Project_logs
+|-------LOG structure.txt
+|-------Run summary.txt
+|------DEBUG.txt
+|------run_results.json
+
+6. Flow summary:
 a. Raw layer : manually created in snowflake actual tables holds the source data
 b. Source Definition : configuration of source data
 c. Staging models : For applying hashing,timestamps, using incremental models
 for performance. 
 d. DW layer models : simple curated outputs for downstream use.
 e. Documentation and testing : provides description and built in tests.
+
+7. Live documentation :
+   dbt docs ->  https://pranjd.github.io/learn_dbt_project/
 
