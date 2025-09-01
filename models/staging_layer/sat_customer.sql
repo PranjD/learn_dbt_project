@@ -1,7 +1,6 @@
 {{
     config(
-        materialized='incremental',
-        unique_key='customer_hk'
+        materialized='table'
     )
 }}
 WITH source_data AS (
