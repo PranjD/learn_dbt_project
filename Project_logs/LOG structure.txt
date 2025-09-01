@@ -2,7 +2,7 @@
 DBT LOG FILE - Execution Tracking structure
 =============================================================
 Date : 01-Sep-2025
-Run ID: #70471844061482
+Run ID: #70471844114949
 Environment : PROD
 Status : SUCCESS
 
@@ -55,10 +55,10 @@ run/my_new_project/models/staging_layer/schema.yml/not_null_hub_customer_custome
 run/my_new_project/models/staging_layer/schema.yml/not_null_sat_customer_customer_email.sql
 run/my_new_project/models/staging_layer/schema.yml/not_null_sat_customer_customer_hk.sql
 run/my_new_project/models/staging_layer/schema.yml/unique_hub_customer_customer_hk.sql
+run/my_new_project/snapshots/sat_customer_snapshot.sql
 run/my_new_project/tests/test_invalid_emails.sql
 run_results.json
 semantic_manifest.json
-
 Also (run_results.json attached separately for reference -> contains model wise success/failure and execution time).
 
 ===================================================================================================================
