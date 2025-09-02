@@ -16,6 +16,7 @@ models:
         description: source of the data.
         tests:
           - accepted_values:
+             arguments:
               values: ['RAW','API','CSV']
 
   - name: stg_link_customer_order
@@ -35,6 +36,7 @@ models:
         description: source of the data.
         tests:
           - accepted_values:
+             arguments:
               values: ['RAW','API','CSV']
 
   - name: stg_sat_customer
@@ -59,6 +61,7 @@ models:
         description: source of the data.
         tests:
           - accepted_values:
+             arguments:
               values: ['RAW','API','CSV']
 
   - name: hub_customer
