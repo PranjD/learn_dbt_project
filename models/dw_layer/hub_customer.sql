@@ -1,3 +1,3 @@
 select customer_hk,customer_id,
 load_dts,source
-from {{ ref('hub_customer') }}
+from {{ ref('stg_hub_customer') }}

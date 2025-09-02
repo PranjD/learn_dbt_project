@@ -1,5 +1,5 @@
 models:
-  - name: hub_customer
+  - name: stg_hub_customer
     description: > 
      This table stores unique customer records with hashed surrogate keys.
     columns:
@@ -14,8 +14,11 @@ models:
         description: Load timestamp.
       - name: source
         description: source of the data.
+        tests:
+          - accepted_values:
+              values: ['RAW','API','CSV']
 
-  - name: link_customer_order
+  - name: stg_link_customer_order
     description: > 
       Link table connecting customers and orders. Uses hashed keys to track 
       relationships.
@@ -30,8 +33,11 @@ models:
         description: Load timestamp.
       - name: source
         description: source of the data.
+        tests:
+          - accepted_values:
+              values: ['RAW','API','CSV']
 
-  - name: sat_customer
+  - name: stg_sat_customer
     description: This Satellite table storing customer descriptive data.
     columns:
       - name: customer_hk
@@ -51,10 +57,13 @@ models:
         description: Load timestamp.
       - name: source
         description: source of the data.
+        tests:
+          - accepted_values:
+              values: ['RAW','API','CSV']
 
-  - name: hub
+  - name: hub_customer
     description: Stores unique business entity
-  - name: link
+  - name: link_customer_order
     description: Links customers to their orders by buisness keys.
-  - name: satellite
+  - name: sat_customer
     description: Captures descriptive attributes of customers.
