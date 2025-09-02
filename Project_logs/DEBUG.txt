@@ -19,29 +19,28 @@ No packages were found in packages.yml
 
 Step 4: dbt build
 
-2025-09-01 18:38:17.453245 (MainThread): 18:38:17  
-2025-09-01 18:38:17.453686 (MainThread): 18:38:17
-2025-09-01 18:38:17.453686 (MainThread): 18:38:17  Done. PASS=14 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=14
-2025-09-01 18:38:17.454674 (MainThread): 18:38:17  Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 15.520485, "process_in_blocks": "0", "process_kernel_time": 2.641723, "process_mem_max_rss": "339432", "process_out_blocks": "12704", "process_user_time": 7.429196}
-2025-09-01 18:38:17.455185 (MainThread): 18:38:17  Observability Metric: command_success=1.0
-2025-09-01 18:38:17.455770 (MainThread): 18:38:17  Observability Metric: command_wall_clock_time=15.520484924316406
-2025-09-01 18:38:17.456246 (MainThread): 18:38:17  Observability Metric: process_user_time=7.429195880889893
-2025-09-01 18:38:17.456701 (MainThread): 18:38:17  Observability Metric: process_kernel_time=2.6417229175567627
-2025-09-01 18:38:17.457157 (MainThread): 18:38:17  Observability Metric: process_mem_max_rss=339432.0
-2025-09-01 18:38:17.457699 (MainThread): 18:38:17  Command `dbt build` succeeded at 18:38:17.457613 after 15.52 seconds
-2025-09-01 18:38:17.458190 (MainThread): 18:38:17  Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [, , ]}
+2025-09-02 08:04:12.469057 (MainThread): 08:04:12  
+2025-09-02 08:04:12.469659 (MainThread): 08:04:12
+2025-09-02 08:04:12.469659 (MainThread): 08:04:12  Done. PASS=17 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=17
+2025-09-02 08:04:12.470776 (MainThread): 08:04:12  Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 17.752981, "process_in_blocks": "0", "process_kernel_time": 3.274707, "process_mem_max_rss": "343528", "process_out_blocks": "12952", "process_user_time": 8.251538}
+2025-09-02 08:04:12.471273 (MainThread): 08:04:12  Observability Metric: command_success=1.0
+2025-09-02 08:04:12.471804 (MainThread): 08:04:12  Observability Metric: command_wall_clock_time=17.752981185913086
+2025-09-02 08:04:12.472301 (MainThread): 08:04:12  Observability Metric: process_user_time=8.251538276672363
+2025-09-02 08:04:12.472766 (MainThread): 08:04:12  Observability Metric: process_kernel_time=3.274707078933716
+2025-09-02 08:04:12.473190 (MainThread): 08:04:12  Observability Metric: process_mem_max_rss=343528.0
+2025-09-02 08:04:12.473893 (MainThread): 08:04:12  Command `dbt build` succeeded at 08:04:12.473795 after 17.75 seconds
+2025-09-02 08:04:12.474598 (MainThread): 08:04:12  Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [, , ]}
 
 Step 5: dbt docs generate
 
-2025-09-01 18:38:32.534623 (MainThread): 18:38:32  Observability Metric: command_success=1.0
-2025-09-01 18:38:32.535204 (MainThread): 18:38:32  Observability Metric: command_wall_clock_time=11.993963241577148
-2025-09-01 18:38:32.535712 (MainThread): 18:38:32  Observability Metric: process_user_time=5.47067403793335
-2025-09-01 18:38:32.536172 (MainThread): 18:38:32  Observability Metric: process_kernel_time=1.6440880298614502
-2025-09-01 18:38:32.536613 (MainThread): 18:38:32  Observability Metric: process_mem_max_rss=300396.0
-2025-09-01 18:38:32.537181 (MainThread): 18:38:32  Command `dbt docs generate` succeeded at 18:38:32.537090 after 11.99 seconds
-2025-09-01 18:38:32.537669 (MainThread): 18:38:32  Connection 'generate_catalog' was properly closed.
-2025-09-01 18:38:32.538070 (MainThread): 18:38:32  Connection 'DBT_PROJECT.information_schema' was left open.
-2025-09-01 18:38:32.538498 (MainThread): 18:38:32  On DBT_PROJECT.information_schema: Close
-2025-09-01 18:38:33.002244 (MainThread): 18:38:33  Connection 'dbt_project.information_schema' was left open.
-2025-09-01 18:38:33.002905 (MainThread): 18:38:33  On dbt_project.information_schema: Close
-2025-09-01 18:38:33.461123 (MainThread): 18:38:33  Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [, , ]}
+This log output is truncated. You can download the full log from the dbt Cloud UI.
+...
+343 (MainThread): 08:04:26  Observability Metric: process_kernel_time=2.460728883743286
+2025-09-02 08:04:26.280811 (MainThread): 08:04:26  Observability Metric: process_mem_max_rss=301828.0
+2025-09-02 08:04:26.281402 (MainThread): 08:04:26  Command `dbt docs generate` succeeded at 08:04:26.281309 after 10.92 seconds
+2025-09-02 08:04:26.281886 (MainThread): 08:04:26  Connection 'generate_catalog' was properly closed.
+2025-09-02 08:04:26.282303 (MainThread): 08:04:26  Connection 'DBT_PROJECT.information_schema' was left open.
+2025-09-02 08:04:26.282710 (MainThread): 08:04:26  On DBT_PROJECT.information_schema: Close
+2025-09-02 08:04:26.724743 (MainThread): 08:04:26  Connection 'dbt_project.information_schema' was left open.
+2025-09-02 08:04:26.725396 (MainThread): 08:04:26  On dbt_project.information_schema: Close
+2025-09-02 08:04:27.196707 (MainThread): 08:04:27  Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [, , ]}
