@@ -9,32 +9,36 @@ Step 2: Profile creation -
 Create profile from connection Snowflake
 
 Step 3: dbt deps -
-18:37:59  Running dbt...
-18:37:59  Warning: No packages were found in packages.yml
-18:37:59  Warning: No packages were found in packages.yml
+08:03:52  Running dbt...
+08:03:52  Warning: No packages were found in packages.yml
+08:03:52  Warning: No packages were found in packages.yml
 
 Step 4: dbt build -
 
-18:38:02  Running dbt...
-18:38:04  Found 8 models, 5 data tests, 1 snapshot, 2 sources, 480 macros
-18:38:04  
-18:38:04
-18:38:04  Concurrency: 4 threads (target='default')
-18:38:04  
-18:38:08 1 of 14 START sql table model dbt_pd_raw.customers ............................. [RUN]
-18:38:08 2 of 14 START sql table model dbt_pd_raw.orders ................................ [RUN]
-18:38:09 2 of 14 OK created sql table model dbt_pd_raw.orders ........................... [SUCCESS 1 in 0.71s]
-18:38:09 3 of 14 START sql incremental model dbt_pd_staging.link_customer_order ......... [RUN]
-18:38:09 1 of 14 OK created sql table model dbt_pd_raw.customers ........................ [SUCCESS 1 in 0.76s]
-18:38:09 4 of 14 START sql incremental model dbt_pd_staging.hub_customer ................ [RUN]
+08:04:05 13 of 17 PASS unique_stg_hub_customer_customer_hk .............................. [PASS in 0.42s]
+08:04:05 16 of 17 START sql table model dbt_pd_mart.hub_customer ........................ [RUN]
+08:04:06 15 of 17 PASS accepted_values_stg_link_customer_order_source__RAW__API__CSV .... [PASS in 0.33s]
+08:04:06 17 of 17 START sql table model dbt_pd_mart.link_customer_order ................. [RUN]
+08:04:06 16 of 17 OK created sql table model dbt_pd_mart.hub_customer ................... [SUCCESS 1 in 0.62s]
+08:04:06 17 of 17 OK created sql table model dbt_pd_mart.link_customer_order ............ [SUCCESS 1 in 0.72s]
+08:04:10 14 of 17 OK snapshotted dbt_project.dbt_pd_staging.sat_customer_snapshot ....... [SUCCESS 0 in 4.92s]
+08:04:12  
+08:04:12
+08:04:12  Finished running 2 incremental models, 1 snapshot, 6 table models, 8 data tests in 0 hours 0 minutes and 15.32 seconds (15.32s).
+08:04:12  
+08:04:12
+08:04:12  Completed successfully
+08:04:12  
+08:04:12
+08:04:12  Done. PASS=17 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=17
 
 Step 5 : dbt docs generate -
 
-18:38:20  Running dbt...
-18:38:22  Found 8 models, 5 data tests, 1 snapshot, 2 sources, 480 macros
-18:38:22  
-18:38:22
-18:38:22  Concurrency: 4 threads (target='default')
-18:38:22  
-18:38:26  Building catalog
-18:38:32  Catalog written to /tmp/jobs/70471844114949/target/target/catalog.json
+08:04:15  Running dbt...
+08:04:17  Found 8 models, 1 snapshot, 8 data tests, 2 sources, 480 macros
+08:04:17  
+08:04:17
+08:04:17  Concurrency: 4 threads (target='default')
+08:04:17  
+08:04:21  Building catalog
+08:04:26  Catalog written to /tmp/jobs/70471844181630/target/target/catalog.json

@@ -2,7 +2,7 @@
 DBT LOG FILE - Execution Tracking structure
 =============================================================
 Date : 01-Sep-2025
-Run ID: #70471844114949
+Run ID: #70471844181630
 Environment : PROD
 Status : SUCCESS
 
@@ -27,34 +27,40 @@ for troubleshooting and tracking model execution.
 ==============================================================
 Files generated during run
 catalog.json
-compiled/my_new_project/models/dw_layer/hub.sql
-compiled/my_new_project/models/dw_layer/link.sql
-compiled/my_new_project/models/dw_layer/satellite.sql
+compiled/my_new_project/models/dw_layer/hub_customer.sql
+compiled/my_new_project/models/dw_layer/link_customer_order.sql
+compiled/my_new_project/models/dw_layer/sat_customer.sql
 compiled/my_new_project/models/raw_layer/customers.sql
 compiled/my_new_project/models/raw_layer/orders.sql
-compiled/my_new_project/models/staging_layer/hub_customer.sql
-compiled/my_new_project/models/staging_layer/link_customer_order.sql
-compiled/my_new_project/models/staging_layer/sat_customer.sql
-compiled/my_new_project/models/staging_layer/schema.yml/not_null_hub_customer_customer_hk.sql
-compiled/my_new_project/models/staging_layer/schema.yml/not_null_sat_customer_customer_email.sql
-compiled/my_new_project/models/staging_layer/schema.yml/not_null_sat_customer_customer_hk.sql
-compiled/my_new_project/models/staging_layer/schema.yml/unique_hub_customer_customer_hk.sql
+compiled/my_new_project/models/staging_layer/schema.yml/accepted_values_stg_hub_customer_source__RAW__API__CSV.sql
+compiled/my_new_project/models/staging_layer/schema.yml/accepted_values_stg_link_customer_order_source__RAW__API__CSV.sql
+compiled/my_new_project/models/staging_layer/schema.yml/accepted_values_stg_sat_customer_source__RAW__API__CSV.sql
+compiled/my_new_project/models/staging_layer/schema.yml/not_null_stg_hub_customer_customer_hk.sql
+compiled/my_new_project/models/staging_layer/schema.yml/not_null_stg_sat_customer_customer_email.sql
+compiled/my_new_project/models/staging_layer/schema.yml/not_null_stg_sat_customer_customer_hk.sql
+compiled/my_new_project/models/staging_layer/schema.yml/unique_stg_hub_customer_customer_hk.sql
+compiled/my_new_project/models/staging_layer/stg_hub_customer.sql
+compiled/my_new_project/models/staging_layer/stg_link_customer_order.sql
+compiled/my_new_project/models/staging_layer/stg_sat_customer.sql
 compiled/my_new_project/tests/test_invalid_emails.sql
 graph_summary.json
 index.html
 manifest.json
-run/my_new_project/models/dw_layer/hub.sql
-run/my_new_project/models/dw_layer/link.sql
-run/my_new_project/models/dw_layer/satellite.sql
+run/my_new_project/models/dw_layer/hub_customer.sql
+run/my_new_project/models/dw_layer/link_customer_order.sql
+run/my_new_project/models/dw_layer/sat_customer.sql
 run/my_new_project/models/raw_layer/customers.sql
 run/my_new_project/models/raw_layer/orders.sql
-run/my_new_project/models/staging_layer/hub_customer.sql
-run/my_new_project/models/staging_layer/link_customer_order.sql
-run/my_new_project/models/staging_layer/sat_customer.sql
-run/my_new_project/models/staging_layer/schema.yml/not_null_hub_customer_customer_hk.sql
-run/my_new_project/models/staging_layer/schema.yml/not_null_sat_customer_customer_email.sql
-run/my_new_project/models/staging_layer/schema.yml/not_null_sat_customer_customer_hk.sql
-run/my_new_project/models/staging_layer/schema.yml/unique_hub_customer_customer_hk.sql
+run/my_new_project/models/staging_layer/schema.yml/accepted_values_stg_hub_customer_source__RAW__API__CSV.sql
+run/my_new_project/models/staging_layer/schema.yml/accepted_values_stg_link_customer_order_source__RAW__API__CSV.sql
+run/my_new_project/models/staging_layer/schema.yml/accepted_values_stg_sat_customer_source__RAW__API__CSV.sql
+run/my_new_project/models/staging_layer/schema.yml/not_null_stg_hub_customer_customer_hk.sql
+run/my_new_project/models/staging_layer/schema.yml/not_null_stg_sat_customer_customer_email.sql
+run/my_new_project/models/staging_layer/schema.yml/not_null_stg_sat_customer_customer_hk.sql
+run/my_new_project/models/staging_layer/schema.yml/unique_stg_hub_customer_customer_hk.sql
+run/my_new_project/models/staging_layer/stg_hub_customer.sql
+run/my_new_project/models/staging_layer/stg_link_customer_order.sql
+run/my_new_project/models/staging_layer/stg_sat_customer.sql
 run/my_new_project/snapshots/sat_customer_snapshot.sql
 run/my_new_project/tests/test_invalid_emails.sql
 run_results.json
