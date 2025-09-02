@@ -42,8 +42,11 @@ models:
       +transient: false
       raw_layer:
         +schema: raw
+        +tags: ['raw']
       staging_layer:
         +schema: staging
+        +tags: ['staging']
       dw_layer:
         +schema: mart
+        +tags: ['mart']
 
