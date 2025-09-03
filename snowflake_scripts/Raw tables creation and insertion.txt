@@ -36,18 +36,19 @@ having count(*) > 1;
 ----To view the tables data-------
 
 ---raw layer----
-select * from dbt_project.raw.raw_customers;
-select * from dbt_project.raw.raw_orders;
+select * from dbt_project.dbt_pd_raw.customers;
+select * from dbt_project.dbt_pd_raw.orders;
 
 ---staging layer----
-select * from dbt_project.dbt_pd_staging.sat_customer;
-select * from dbt_project.dbt_pd_staging.link_customer_order;
-select * from dbt_project.dbt_pd_staging.hub_customer;
+select * from dbt_project.dbt_pd_staging.stg_sat_customer;
+select * from dbt_project.dbt_pd_staging.stg_link_customer_order;
+select * from dbt_project.dbt_pd_staging.stg_hub_customer;
 
 ----final dw layer----
-select * from dbt_project.dbt_pd_mart.hub;
-select * from dbt_project.dbt_pd_mart.link;
-select * from dbt_project.dbt_pd_mart.satellite;
+select * from dbt_project.dbt_pd_mart.hub_customer;
+select * from dbt_project.dbt_pd_mart.link_customer_order;
+select * from dbt_project.dbt_pd_mart.sat_customer;
+
 
 
 
